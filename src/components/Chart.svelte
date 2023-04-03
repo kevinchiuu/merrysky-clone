@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
     import { onMount } from "svelte";
     import Chart from 'chart.js/auto'
 
     function chart() {
-        const ctx = document.getElementById('myChart');
+        const ctx = <HTMLCanvasElement>document.getElementById('myChart');
   
         new Chart(ctx, {
             type: 'bar',
