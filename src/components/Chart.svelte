@@ -1,6 +1,5 @@
 <script lang='ts'>
     import { onMount } from "svelte";
-    import String from "./string.svelte";
 
     const data: { day: string, Cloud: number, Rain: number, Clear: Number }[] = [
         { day: "Tuesday", Rain: 4, Cloud: 3, Clear: 1 }
@@ -12,7 +11,9 @@
     let cloudContainer2: any;
 
     onMount(() => {
-        document.createElement('div');
+        const child = document.createElement('div');
+        child.textContent = 'Rain'
+        rainContainer.appendChild(child)
 
         const child2 = document.createElement('div');
         child2.textContent = 'Cloud'
@@ -38,9 +39,9 @@
         <div class="bg-slate-300 h-full w-1/4 text-center rounded-r-lg"> Cloudy </div>
     </div> -->
     <div class="h-14 w-96 flex">
-        <div bind:this={rainContainer} class="bg-blue-500 justify-center text-center w-1/4 rounded-l-lg"> <String string={"Rain"}/> </div>
-        <div bind:this={cloudContainer} class="bg-slate-300 justify-center text-center w-1/4"></div>
-        <div bind:this={rainContainer2} class="bg-blue-500 justify-center text-center w-1/4"></div>
-        <div bind:this={cloudContainer2} class="bg-slate-300 justify-center text-center w-1/4 rounded-r-lg"></div>
+        <div bind:this={rainContainer} class="bg-blue-500 justify-center text-center w-1/4 rounded-l-lg flex items-center"></div>
+        <div bind:this={cloudContainer} class="bg-slate-300 justify-center text-center w-1/4 flex items-center"></div>
+        <div bind:this={rainContainer2} class="bg-blue-500 justify-center text-center w-1/4 flex items-center"></div>
+        <div bind:this={cloudContainer2} class="bg-slate-300 justify-center text-center w-1/4 rounded-r-lg flex items-center"></div>
     </div>
 </div>
