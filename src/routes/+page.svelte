@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Chart from "../components/Chart.svelte";
+    import Chart from "../components/chart.svelte";
     import "../app.css"
 </script>
 
