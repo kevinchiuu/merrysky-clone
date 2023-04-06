@@ -3,6 +3,9 @@
     import "../app.css"
 </script>
 
-<body>
-    <Chart/> 
-</body>
+<div>
+    <Chart/>
+    <Chart/>
+</div>
+
+
