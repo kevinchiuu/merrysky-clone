@@ -39,9 +39,9 @@
         <div class="bg-slate-300 h-full w-1/4 text-center rounded-r-lg"> Cloudy </div>
     </div> -->
     <div class="h-14 w-96 flex">
-        <div bind:this={rainContainer} class="bg-blue-500 justify-center text-center w-1/4 rounded-l-lg flex items-center"></div>
-        <div bind:this={cloudContainer} class="bg-slate-300 justify-center text-center w-1/4 flex items-center"></div>
-        <div bind:this={rainContainer2} class="bg-blue-500 justify-center text-center w-1/4 flex items-center"></div>
-        <div bind:this={cloudContainer2} class="bg-slate-300 justify-center text-center w-1/4 rounded-r-lg flex items-center"></div>
+        <div bind:this={rainContainer} class="bg-blue-500 justify-center w-1/4 rounded-l-lg flex items-center"></div>
+        <div bind:this={cloudContainer} class="bg-slate-300 justify-center w-1/4 flex items-center"></div>
+        <div bind:this={rainContainer2} class="bg-blue-500 justify-center w-1/4 flex items-center"></div>
+        <div bind:this={cloudContainer2} class="bg-slate-300 justify-center w-1/4 rounded-r-lg flex items-center"></div>
     </div>
 </div>
