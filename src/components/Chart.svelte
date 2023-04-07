@@ -1,9 +1,5 @@
 <script lang='ts'>
     import { onMount } from "svelte";
-
-    const data: { day: string, Cloud: number, Rain: number, Clear: Number }[] = [
-        { day: "Tuesday", Rain: 4, Cloud: 3, Clear: 1 }
-    ]
     
     let rainContainer: any;
     let cloudContainer: any;
