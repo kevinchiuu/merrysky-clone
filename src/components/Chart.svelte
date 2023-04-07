@@ -1,6 +1,8 @@
 <script lang='ts'>
     import { onMount } from "svelte";
-    
+
+    export let rain: any;
+
     let rainContainer: any;
     let cloudContainer: any;
     let clearContainer: any;
@@ -8,7 +10,7 @@
 
     onMount(() => {
         const child = document.createElement('div');
-        child.textContent = 'Rain'
+        child.textContent = rain
         rainContainer.appendChild(child)
 
         const child2 = document.createElement('div');

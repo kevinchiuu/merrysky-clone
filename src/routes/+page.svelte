@@ -2,14 +2,14 @@
     import Chart from "../components/chart.svelte";
     import "../app.css"
 
-    const data: { day: string, Cloud: number, Rain: number, Clear: Number }[] = [
-        { day: "Tuesday", Rain: 4, Cloud: 3, Clear: 1 }
+    const data: { day: string, summary: string }[] = [
+        { day: "Tuesday", summary: "Rain"}
     ]
     
 </script>
 
 <div class="mx-[45rem]">
-    <Chart/>
+    <Chart rain={data[0].summary}/>
 </div>
 
 
