@@ -3,8 +3,7 @@
     import "../app.css"
 </script>
 
-<div>
-    <Chart/>
+<div class="mx-[45rem]">
     <Chart/>
 </div>
 
