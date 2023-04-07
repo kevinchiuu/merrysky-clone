@@ -74,13 +74,13 @@
         </div>
         <div class="m-0 flex-row flex">
             <div class="mr-[1.5em] align-top text-[14px]"> 12am </div>
-            <div class="mr-[2em] align-top text-center text-[14px]"> 2am </div>
-            <div class="mr-[2em] align-top text-center text-[14px]"> 4am </div>
-            <div class="mr-[2em] align-top text-center text-[14px]"> 6am </div>
-            <div class="mr-[2em] align-top text-center text-[14px]"> 8am </div>
-            <div class="mr-[2em] align-top text-center text-[14px]"> 10am </div>
-            <div class="mr-[2em] align-top text-center text-[14px]"> 12pm </div>
-            <div class="mr-[2em] align-top text-center text-[14px]"> 2pm </div>
+            <div class="mr-[2.5em] align-top text-center text-[14px]"> 2am </div>
+            <div class="mr-[2.5em] align-top text-center text-[14px]"> 4am </div>
+            <div class="mr-[2.5em] align-top text-center text-[14px]"> 6am </div>
+            <div class="mr-[2.5em] align-top text-center text-[14px]"> 8am </div>
+            <div class="mr-[2.5em] align-top text-center text-[14px]"> 10am </div>
+            <div class="mr-[2.5em] align-top text-center text-[14px]"> 12pm </div>
+            <div class="mr-[2.5em] align-top text-center text-[14px]"> 2pm </div>
             <div class="mr-[2.5em] align-top text-center text-[14px]"> 4pm </div>
             <div class="mr-[2.5em] align-top text-center text-[14px]"> 6pm </div>
             <div class="mr-[2.5em] align-top text-center text-[14px]"> 8pm </div>
