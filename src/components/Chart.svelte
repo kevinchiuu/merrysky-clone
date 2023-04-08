@@ -1,7 +1,8 @@
 <script lang='ts'>
     import { onMount } from "svelte";
+    import Ticker from "./ticker.svelte";
 
-    export let rain: any;
+    export let rain: any; 
 
     let rainContainer: any;
     let cloudContainer: any;
@@ -15,6 +16,7 @@
 
         const tickerspacing: number = width / 24
         console.log('tickerspacing', tickerspacing)
+        return tickerspacing
     }
 
     onMount(() => {
@@ -49,8 +51,9 @@
             <div bind:this={lightRainContainer} class="bg-blue-400 justify-center w-1/4 rounded-r-lg flex items-center"></div>
         </div>
         <div class="m-0 w-full">
-            <!-- <div class="w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 mr-[1.65em] align-top"></div>
-            <div class="w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 mr-[1.65em] align-top"></div>
+            <Ticker spacing={tickerSpacing}/>
+            <div class="w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 mr-{tickerSpacing} align-top"></div> 
+            <!-- <div class="w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 mr-[1.65em] align-top"></div>
             <div class="w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 mr-[1.65em] align-top"></div>
             <div class="w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 mr-[1.65em] align-top"></div>
             <div class="w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 mr-[1.65em] align-top"></div>
