@@ -8,7 +8,7 @@
     
 </script>
 
-<div class="mx-[45rem]">
+<div class="xl:mx-[20em] lg:mx-[10em] md:mx-[5em] sm:mx-[3em]">
     <Chart rain={data[0].summary}/>
 </div>
 
