@@ -9,22 +9,26 @@
     let cloudContainer: any;
     let clearContainer: any;
     let lightRainContainer: any;
+    let tickerContainer: any;
+
+    // function createTicker() {
+    //     for (let i = 0; i <= 24; i++) {
+    //         const tickerDiv = document.createElement('div');
+    //         document.body.appendChild(tickerDiv)
+    //     }
+    // }
 
     function tickerSpacing() {
         window.addEventListener(('resize'), () => {
             const timelineDiv: any = document.getElementById("timeline")
             const width = timelineDiv.offsetWidth;
-            console.log('width', width)
-            
-            const spacing = (width / 24).toFixed(2)
-
+            const spacing = (width / 28).toFixed(2)
             const ticker = document.querySelectorAll("div.ticker") as NodeListOf<HTMLElement>
             ticker.forEach((d) => {
                 d.style.marginRight = `${spacing}px`
             })
 
         }, true)
-
     }
 
     onMount(() => {
@@ -43,7 +47,7 @@
         const child4 = document.createElement('div');
         child4.textContent = 'Light Rain'
         lightRainContainer.appendChild(child4)
-
+        
         tickerSpacing()
     })
 
