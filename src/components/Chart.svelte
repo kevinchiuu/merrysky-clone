@@ -1,7 +1,5 @@
 <script lang='ts'>
-    import { onMount, tick } from "svelte";
-    import TickerEven from "./tickerEven.svelte";
-    import TickerOdd from "./tickerOdd.svelte";
+    import { onMount } from "svelte"; 
 
     export let rain: any; 
 
@@ -9,25 +7,16 @@
     let cloudContainer: any;
     let clearContainer: any;
     let lightRainContainer: any;
-    let tickerContainer: any;
-
-    // function createTicker() {
-    //     for (let i = 0; i <= 24; i++) {
-    //         const tickerDiv = document.createElement('div');
-    //         document.body.appendChild(tickerDiv)
-    //     }
-    // }
 
     function tickerSpacing() {
         window.addEventListener(('resize'), () => {
             const timelineDiv: any = document.getElementById("timeline")
             const width = timelineDiv.offsetWidth;
-            const spacing = (width / 28).toFixed(2)
+            const spacing = (width / 24).toFixed(1)
             const ticker = document.querySelectorAll("div.ticker") as NodeListOf<HTMLElement>
             ticker.forEach((d) => {
-                d.style.marginRight = `${spacing}px`
+                d.style.width = `${spacing}px`
             })
-
         }, true)
     }
 
@@ -55,38 +44,38 @@
 
 <div>
     <h1 class="text-xl"> This is the chart component </h1>
-    <div class="flex flex-col">
-        <div id="timeline" class="h-11 w-full flex">
+    <div class="flex flex-col w-full">
+        <div id="timeline" class="h-11 w-full flex box-border">
             <div bind:this={rainContainer} class="bg-blue-500 justify-center w-1/4 rounded-l-lg flex items-center"></div>
             <div bind:this={cloudContainer} class="bg-slate-300 justify-center w-1/4 flex items-center"></div>
             <div bind:this={clearContainer} class="bg-slate-100 justify-center w-1/4 flex items-center"></div>
             <div bind:this={lightRainContainer} class="bg-blue-400 justify-center w-1/4 rounded-r-lg flex items-center"></div>
         </div>
-        <div class="m-0 w-full">
-            <div class="ticker w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[10px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
-            <div class="ticker w-0.5 inline-block h-[14px] self-stretch bg-black opacity-100 dark:opacity-50 align-top"></div>
+        <div class="w-full flex">
+            <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
+            <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
         </div>
         <!-- <div class="m-0 flex-row flex">
             <div class="mr-[1.5em] align-top text-[14px]"> 12am </div>
