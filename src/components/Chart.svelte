@@ -2,6 +2,7 @@
     import { onMount } from "svelte"; 
 
     export let rain: any; 
+    export let temp: any;
 
     let rainContainer: any;
     let cloudContainer: any;
@@ -77,21 +78,34 @@
             <div class="ticker h-[10px] border-l-2 border-black inline-block flex-1"></div>
             <div class="ticker h-[15px] border-l-2 border-black inline-block flex-1"></div>
         </div>
-        <!-- <div class="m-0 flex-row flex">
-            <div class="mr-[1.5em] align-top text-[14px]"> 12am </div>
-            <div class="mr-[2.5em] align-top text-center text-[14px]"> 2am </div>
-            <div class="mr-[2.5em] align-top text-center text-[14px]"> 4am </div>
-            <div class="mr-[2.5em] align-top text-center text-[14px]"> 6am </div>
-            <div class="mr-[2.5em] align-top text-center text-[14px]"> 8am </div>
-            <div class="mr-[2.5em] align-top text-center text-[14px]"> 10am </div>
-            <div class="mr-[2.5em] align-top text-center text-[14px]"> 12pm </div>
-            <div class="mr-[2.5em] align-top text-center text-[14px]"> 2pm </div>
-            <div class="mr-[2.5em] align-top text-center text-[14px]"> 4pm </div>
-            <div class="mr-[2.5em] align-top text-center text-[14px]"> 6pm </div>
-            <div class="mr-[2.5em] align-top text-center text-[14px]"> 8pm </div>
-            <div class="mr-[2.5em] align-top text-center text-[14px]"> 10pm </div>
-        </div> -->
-        <div> Temp </div>
+        <div class="m-0 flex-row flex w-full">
+            <div class="flex-1 align-top text-[14px] mr-[-10px]"> 12am </div>
+            <div class="flex-1 align-top text-[14px]"> 2am </div>
+            <div class="flex-1 align-top text-[14px]"> 4am </div>
+            <div class="flex-1 align-top text-[14px]"> 6am </div>
+            <div class="flex-1 align-top text-[14px]"> 8am </div>
+            <div class="flex-1 align-top text-[14px]"> 10am </div>
+            <div class="flex-1 align-top text-[14px]"> 12pm </div>
+            <div class="flex-1 align-top text-[14px] ml-[5px]"> 2pm </div>
+            <div class="flex-1 align-top text-[14px] m1-[5px]"> 4pm </div>
+            <div class="flex-1 align-top text-[14px] m1-[5px]"> 6pm </div>
+            <div class="flex-1 align-top text-[14px] m1-[5px]"> 8pm </div>
+            <div class="flex-1 align-top text-[14px] mr-[12px]"> 10pm </div>
+        </div>
+        <div class="w-full flex flex-row m-0">
+            <div class="flex-1 align-top text-[14px] mr-[-10px]"> {temp[0]} <span> &#176 C </span> </div>
+            <div class="flex-1 align-top text-[14px]"> {temp[1]} <span> &#176 C </span> </div>
+            <div class="flex-1 align-top text-[14px]"> {temp[2]} <span> &#176 C </span> </div>
+            <div class="flex-1 align-top text-[14px]"> {temp[3]} <span> &#176 C </span> </div>
+            <div class="flex-1 align-top text-[14px]"> {temp[4]} <span> &#176 C </span> </div>
+            <div class="flex-1 align-top text-[14px]"> {temp[5]} <span> &#176 C </span> </div>
+            <div class="flex-1 align-top text-[14px]"> {temp[6]} <span> &#176 C </span> </div>
+            <div class="flex-1 align-top text-[14px] ml-[5px]"> {temp[7]} <span> &#176 C </span> </div>
+            <div class="flex-1 align-top text-[14px] m1-[5px]"> {temp[8]} <span> &#176 C </span> </div>
+            <div class="flex-1 align-top text-[14px] m1-[5px]"> {temp[9]} <span> &#176 C </span> </div>
+            <div class="flex-1 align-top text-[14px] m1-[5px]"> {temp[10]} <span> &#176 C </span> </div>
+            <div class="flex-1 align-top text-[14px] mr-[12px]"> {temp[11]} <span> &#176 C </span> </div>
+        </div>
     </div>
 </div>
 
